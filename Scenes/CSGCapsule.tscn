@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c2jl30ea2lqvm"]
+
+[ext_resource type="Material" uid="uid://cwyfpulbrxql7" path="res://Materials/material_default.tres" id="1_41g2a"]
+
+[node name="CsgCapsule" type="CSGCombiner3D" unique_id=46041673]
+
+[node name="Top" type="CSGSphere3D" parent="." unique_id=1475346169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+radial_segments = 8
+material = ExtResource("1_41g2a")
+
+[node name="Middle" type="CSGCylinder3D" parent="." unique_id=1739319304]
+height = 1.0
+material = ExtResource("1_41g2a")
+
+[node name="Bottoms" type="CSGSphere3D" parent="." unique_id=87440507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+radial_segments = 8
+material = ExtResource("1_41g2a")

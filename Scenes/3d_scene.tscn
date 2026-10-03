@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cede4vrdjpqlb"]
+
+[ext_resource type="PackedScene" uid="uid://c2jl30ea2lqvm" path="res://Scenes/CSGCapsule.tscn" id="1_cw1lv"]
+
+[node name="3D Scene" type="Node3D" unique_id=1132027848]
+
+[node name="AuGoField Nodes" type="Node" parent="." unique_id=1288937183]
+
+[node name="Camera3D" type="Camera3D" parent="AuGoField Nodes" unique_id=2099419695]
+transform = Transform3D(0.70710677, -0.1830127, 0.68301266, 0, 0.9659258, 0.25881904, -0.70710677, -0.1830127, 0.68301266, 5, 5, 5)
+
+[node name="Semantic Elements" type="Node" parent="." unique_id=51829606]
+
+[node name="Semantic Pawns" type="Node" parent="Semantic Elements" unique_id=2074240276]
+
+[node name="Player Characters" type="Node3D" parent="Semantic Elements/Semantic Pawns" unique_id=256563613]
+
+[node name="CsgCapsule" parent="Semantic Elements/Semantic Pawns/Player Characters" unique_id=46041673 instance=ExtResource("1_cw1lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5116374, 0)
+
+[node name="Non-Player Characters" type="Node3D" parent="Semantic Elements/Semantic Pawns" unique_id=366866690]
+
+[node name="CsgCapsule2" parent="Semantic Elements/Semantic Pawns/Non-Player Characters" unique_id=1636322418 instance=ExtResource("1_cw1lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9274282, 1.5116374, -3.2998629)
+
+[node name="Enemies" type="Node3D" parent="Semantic Elements/Semantic Pawns" unique_id=626540196]
+
+[node name="Semantic Props" type="Node" parent="Semantic Elements" unique_id=1163254389]
+
+[node name="Collectables" type="Node3D" parent="Semantic Elements/Semantic Props" unique_id=1525282616]
+
+[node name="Interactables" type="Node3D" parent="Semantic Elements/Semantic Props" unique_id=354266887]
+
+[node name="Static Props" type="Node3D" parent="Semantic Elements/Semantic Props" unique_id=772123894]
+
+[node name="Decorative Props" type="Node3D" parent="Semantic Elements/Semantic Props" unique_id=1752181363]
+
+[node name="Dynamic Props" type="Node3D" parent="Semantic Elements/Semantic Props" unique_id=209189111]
+
+[node name="Semantic Environments" type="Node" parent="Semantic Elements" unique_id=1924459660]
+
+[node name="Environmental Terrain" type="Node3D" parent="Semantic Elements/Semantic Environments" unique_id=550668359]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Semantic Elements/Semantic Environments/Environmental Terrain" unique_id=2034042234]
+
+[node name="Floor" type="CSGBox3D" parent="Semantic Elements/Semantic Environments/Environmental Terrain/CSGCombiner3D" unique_id=941682543]
+size = Vector3(100, 1, 100)
+
+[node name="Suggestive Terrain" type="Node3D" parent="Semantic Elements/Semantic Environments" unique_id=1882510743]
+
+[node name="Input User Interfaces" type="Node" parent="Semantic Elements" unique_id=1297145839]
+
+[node name="Buttons" type="Control" parent="Semantic Elements/Input User Interfaces" unique_id=1514964300]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sliders" type="Control" parent="Semantic Elements/Input User Interfaces" unique_id=25726678]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Toggles" type="Control" parent="Semantic Elements/Input User Interfaces" unique_id=2100579034]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Feedback User Interfaces" type="Node" parent="Semantic Elements" unique_id=1299379404]
+
+[node name="Informational Text" type="Control" parent="Semantic Elements/Feedback User Interfaces" unique_id=1862946511]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Error Text" type="Control" parent="Semantic Elements/Feedback User Interfaces" unique_id=706838657]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Warning Text" type="Control" parent="Semantic Elements/Feedback User Interfaces" unique_id=1533141616]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Status Indicators" type="Control" parent="Semantic Elements/Feedback User Interfaces" unique_id=424441271]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
